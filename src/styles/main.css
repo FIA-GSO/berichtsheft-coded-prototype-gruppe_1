@@ -362,7 +362,7 @@ a {
 }
 
 .hauptButton {
-  border: solid;
+  border: none;
   background-color: white;
   padding: 1vh 2vh;
 }
