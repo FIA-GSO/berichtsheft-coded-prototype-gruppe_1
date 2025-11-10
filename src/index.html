@@ -28,19 +28,21 @@
         <section class="reminderBox">
           <h2 class="headNavboxTitle">Erinnerung</h2>
           <div class="remiderState">
-            <div class="svg">
-              <svg width="3vW" height="3vH" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="45" fill="white" stroke="#333" stroke-width="3"></circle>
-                <circle cx="50" cy="50" r="3" fill="#333"></circle>
-                <g transform-origin="50 50">
-                  <line x1="50" y1="50" x2="50" y2="30" stroke="black" stroke-width="4" stroke-linecap="round" transform="rotate(305 50 50)"></line>
-                  <line x1="50" y1="50" x2="50" y2="20" stroke="black" stroke-width="3" stroke-linecap="round" transform="rotate(60 50 50)"></line>
-                </g>
-              </svg>
-            </div>
-            <div class="reminderInfoWrapper">
-              <p class="reminderStateInfoText">Tägliche Erinnerung</p>
-              <p class="remiderStateInfoTime">12:00 Uhr Heute</p>
+            <div class="reminderStateWrapper">
+              <div class="svg">
+                <svg width="3vW" height="3vH" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" fill="white" stroke="#333" stroke-width="3"></circle>
+                  <circle cx="50" cy="50" r="3" fill="#333"></circle>
+                  <g transform-origin="50 50">
+                    <line x1="50" y1="50" x2="50" y2="30" stroke="black" stroke-width="4" stroke-linecap="round" transform="rotate(305 50 50)"></line>
+                    <line x1="50" y1="50" x2="50" y2="20" stroke="black" stroke-width="3" stroke-linecap="round" transform="rotate(60 50 50)"></line>
+                  </g>
+                </svg>
+              </div>
+              <div class="reminderInfoWrapper">
+                <span class="reminderStateInfoText">Tägliche Erinnerung</span>
+                <span class="remiderStateInfoTime">12:00 Uhr Heute</span>
+              </div>
             </div>
             <button class="editReminder">Bearbeiten
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(239, 217, 19)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -62,9 +64,9 @@
     <main class="abnOverview">
       <article class="abnItem">
         <div class="abnItemInfo">
-          <p class="abnText">ABN Nr: 123</p>
-          <p class="abnText">Zeitraum: 01.01.2025-07.01.2025</p>
-          <p class="abnText">Status: Angenommen</p>
+          <span class="abnText">ABN Nr: 123</span>
+          <span class="abnText">Zeitraum: 01.01.2025-07.01.2025</span>
+          <span class="abnText">Status: Angenommen</span>
         </div>
         <div class="abnItemMenu">
           <button class="abnItemMenuButton">Senden
