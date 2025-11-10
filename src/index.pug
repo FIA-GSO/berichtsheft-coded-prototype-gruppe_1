@@ -1,75 +1,102 @@
-doctype html
-html(lang="de")
-  head
-    title=Prototype
-    link(rel='stylesheet', type='text/css', href='main.css')
-    link(href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet')
-  body
-    .fullPage
-      .headNav#headNav
-        .headNavContent
-          .statusBox
-            .headNavboxTitle Status
-            .statusDropDown
-              label(for="status")
-              select(name="Status")
-                option(value="all") Alle
-                option(value="accepted") Angenommen
-                option(value="declined") Abgelehnt
-                option(value="open") Offen
-          .calenderBox
-            .headNavboxTitle Kalender
-            .datepicker Datum Auswählen
-              input(type="date")
-          .reminderBox
-            .headNavboxTitle Erinnerung
-              .remiderState
-                .svg
-                  svg(width="3vW", height="3vH", viewBox="0 0 100 100", xmlns="http://www.w3.org/2000/svg")
-                    circle(cx="50", cy="50", r="45", fill="white", stroke="#333", stroke-width="3")
-                    circle(cx="50", cy="50", r="3", fill="#333")
-                    g(transform-origin="50 50")
-                      line(x1="50", y1="50", x2="50", y2="30", stroke="black", stroke-width="4", stroke-linecap="round", transform="rotate(305 50 50)")
-                      line(x1="50", y1="50", x2="50", y2="20", stroke="black", stroke-width="3", stroke-linecap="round", transform="rotate(60 50 50)")
-                .reminderInfoWrapper
-                  .reminderStateInfoText Tägliche Erinnerung
-                  .remiderStateInfoTime 12:00 Uhr Heute
-                button.editReminder Bearbeiten
-                  svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(239, 217, 19)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-                    path(d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7")
-                    path(d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z")
-      .collapse-toggle-wrapper
-        button.nav-toggle#navToggle(aria-controls="headNav", aria-expanded="true")
-          svg.icon.icon-arrow(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-            polyline(points="18 15 12 9 6 15")
-      .abnOverview
-        .abnItem
-          .abnItemInfo
-            span.abnText ABN Nr: 123
-            span.abnText Zeitraum: 01.01.2025-07.01.2025
-            span.abnText Status: Angenommen
-          .abnItemMenu
-            button.abnItemMenuButton Senden
-              svg.abnItemMenuSvg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-                line(x1="22" y1="2" x2="11" y2="13")
-                polygon(points="22 2 15 22 11 13 2 9 22 2")
-            button.abnItemMenuButton Bearbeiten
-              svg.abnItemMenuSvg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(239, 217, 19)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-                path(d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7")
-                path(d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z")
-            button.abnItemMenuButton Löschen
-              svg.abnItemMenuSvg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-                path(d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z")
-                line(x1="18" y1="9" x2="12" y2="15")
-                line(x1="12" y1="9" x2="18" y2="15")
-      a(href="createView.html")
-        button.addingButton
-          svg.icon.icon-plus(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-            line(x1="12", y1="5", x2="12", y2="19")
-            line(x1="5", y1="12", x2="19", y2="12")
-          | Erstellen
-
-    script.
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <title>Prototype</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="headNav" id="headNav">
+      <div class="headNavContent">
+        <section class="statusBox">
+          <label class="headNavboxTitle" for="status">Status</label>
+          <div class="statusDropDown">
+            <select name="Status" id="status">
+              <option value="all">Alle</option>
+              <option value="accepted">Angenommen</option>
+              <option value="declined">Abgelehnt</option>
+              <option value="open">Offen</option>
+            </select>
+          </div>
+        </section>
+        <section class="calenderBox">
+          <h2 class="headNavboxTitle">Kalender</h2>
+          <label class="datepicker" for="datepicker">Datum Auswählen
+            <input type="date" id="datepicker">
+          </label>
+        </section>
+        <section class="reminderBox">
+          <h2 class="headNavboxTitle">Erinnerung</h2>
+          <div class="remiderState">
+            <div class="svg">
+              <svg width="3vW" height="3vH" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="white" stroke="#333" stroke-width="3"></circle>
+                <circle cx="50" cy="50" r="3" fill="#333"></circle>
+                <g transform-origin="50 50">
+                  <line x1="50" y1="50" x2="50" y2="30" stroke="black" stroke-width="4" stroke-linecap="round" transform="rotate(305 50 50)"></line>
+                  <line x1="50" y1="50" x2="50" y2="20" stroke="black" stroke-width="3" stroke-linecap="round" transform="rotate(60 50 50)"></line>
+                </g>
+              </svg>
+            </div>
+            <div class="reminderInfoWrapper">
+              <p class="reminderStateInfoText">Tägliche Erinnerung</p>
+              <p class="remiderStateInfoTime">12:00 Uhr Heute</p>
+            </div>
+            <button class="editReminder">Bearbeiten
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(239, 217, 19)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              </svg>
+            </button>
+          </div>
+        </section>
+      </div>
+    </nav>
+    <div class="collapse-toggle-wrapper">
+      <button class="nav-toggle" id="navToggle" aria-controls="headNav" aria-expanded="true">
+        <svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </button>
+    </div>
+    <main class="abnOverview">
+      <article class="abnItem">
+        <div class="abnItemInfo">
+          <p class="abnText">ABN Nr: 123</p>
+          <p class="abnText">Zeitraum: 01.01.2025-07.01.2025</p>
+          <p class="abnText">Status: Angenommen</p>
+        </div>
+        <div class="abnItemMenu">
+          <button class="abnItemMenuButton">Senden
+            <svg class="abnItemMenuSvg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+          <button class="abnItemMenuButton">Bearbeiten
+            <svg class="abnItemMenuSvg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(239, 217, 19)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+          </button>
+          <button class="abnItemMenuButton">Löschen
+            <svg class="abnItemMenuSvg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"></path>
+              <line x1="18" y1="9" x2="12" y2="15"></line>
+              <line x1="12" y1="9" x2="18" y2="15"></line>
+            </svg>
+          </button>
+        </div>
+      </article>
+    </main>
+    <a class="addingButton" href="createView.html">
+      <svg class="icon icon-plus" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+      Erstellen
+    </a>
+    <script>
       const toggleButton = document.getElementById('navToggle');
       const headNav = document.getElementById('headNav');
 
@@ -78,18 +105,6 @@ html(lang="de")
         const isExpanded = !headNav.classList.contains('is-collapsed');
         toggleButton.setAttribute('aria-expanded', isExpanded);
       });
-
-//- Papierflieger SVG
-//- svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-//-   line(x1="22" y1="2" x2="11" y2="13")
-//-   polygon(points="22 2 15 22 11 13 2 9 22 2")
-
-//- Bearbeiten SVG
-//- svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-//-   path(d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7")
-//-   path(d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z")
-
-//- Löschen SVG
-//- svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-//-   path(d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7")
-//-   path(d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z")
+    </script>
+  </body>
+</html>
