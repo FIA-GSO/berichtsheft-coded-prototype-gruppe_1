@@ -9,7 +9,7 @@
     "build:css": "copyfiles -f src/styles/**/*.css dist",
     "build": "npm-run-all build:pug build:css",
     "watch:pug": "pug src --out dist --watch",
-    "watch:css": "chokidar \"src/styles/**/*.css\" -c \"copyfiles -f src/styles/**/*.css dist\"",
+    "watch:css": "npm run build:css && chokidar \"src/styles/**/*.css\" -c \"copyfiles -f src/styles/**/*.css dist\"",
     "serve": "live-server dist",
     "start": "npm-run-all --parallel watch:pug watch:css serve"
   },
