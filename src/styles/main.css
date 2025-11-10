@@ -1,0 +1,257 @@
+* {
+  font-family: 'Inter';
+  font-size: 1.5vH;
+}
+
+input {
+  width: 100%;
+  height: 3vH;
+  border-radius: 10px;
+}
+
+select {
+  width: 100%;
+  height: 3vH;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fullPage {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.topLine {
+  border-top: solid;
+}
+.navToggle {
+  display: flex;
+}
+.headNav {
+  display: flex;
+}
+.headNavContent {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.headNavboxTitle {
+  margin: 1vH;
+  font-size: larger;
+  font-weight: bolder;
+}
+.statusBox {
+  border: solid;
+  width: 100%;
+  border-radius: 10px;
+}
+.statusDropDown {
+  display: flex;
+  justify-content: center;
+  margin: 2vH;
+}
+
+.calenderBox {
+  border: solid;
+  width: 100%;
+  border-radius: 10px;
+}
+.datepicker {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2vH;
+}
+
+.reminderBox {
+  border: solid;
+  width: 100%;
+  border-radius: 10px;
+}
+.remiderState {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 1.5vH 0.5vH 1.5vH 0.5vH;
+}
+.svg {
+  background-color: lightgray;
+  border-radius: 10px 0px 0px 10px;
+  padding: 1vH 0.5vH 1vH 0.5vH;
+}
+.reminderInfoWrapper {
+  background-color: lightgray;
+  border-radius: 0px 10px 10px 0px;
+  padding: 1vH 2vH 1vH 1vH;
+}
+.reminderStateInfoText {
+  font-weight: bolder;
+}
+
+.editReminder {
+  margin-top: 1vH;
+  border-radius: 10px 10px 10px 10px;
+}
+
+/* collapse function */
+.collapse-toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: -16px;
+}
+
+.nav-toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  z-index: 10;
+}
+.nav-toggle .icon-arrow {
+  transition: transform 0.3s ease-in-out;
+}
+
+.headNav.is-collapsed {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom-width: 0;
+  opacity: 0;
+}
+.headNav.is-collapsed + .collapse-toggle-wrapper .icon-arrow {
+  transform: rotate(180deg);
+}
+/* end colapse function */
+
+.abnOverview {
+  background-color: lightgray;
+  margin: 5%;
+  padding: 2%;
+  min-height: 65vH;
+  border-radius: 10px;
+}
+
+.abnItem {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.abnItemInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 60%;
+  margin: 2%;
+}
+
+.abnText {
+  display: flex;
+  font-size: 2vH;
+}
+
+.abnItemMenu {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: 1%;
+  margin-right: 3%;
+}
+
+.abnItemMenuButton {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin: 2%;
+  padding: 2%;
+  border-radius: 10px;
+}
+
+.abnItemMenuSvg {
+  margin-right: 10%;
+}
+
+.addingButton {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  border-radius: 10px;
+  margin-left: 5%;
+}
+
+
+/* --------------- createView CSS -------------------- */
+.headBarWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currentAbnBar {
+  display: flex;
+  align-items: center;
+  border: solid;
+  border-radius: 10px;
+  height: 5vH;
+  width: 90%;
+}
+
+.dateOfAbn {
+  font-size: 2.5vH;
+  margin: 5%;
+}
+
+.burgerMenu {
+  margin: 2vH;
+}
+
+.currentAbn {
+  border: solid;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+.currentDay {
+  margin: 2vH 0 4vH 3vH;
+  font-size: 2vH;
+}
+
+.currentAbnItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.item1wrapper {
+  display: flex;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0 3vH 1vH 3vH;
+  width: 70%;
+}
+
+.itemDuration {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.item2wrapper {
+  display: flex;
+}
