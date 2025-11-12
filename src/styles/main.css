@@ -52,7 +52,7 @@ a {
 .statusDropDown {
   display: flex;
   justify-content: center;
-  margin: 2vH;
+  margin: 4vH;
 }
 
 .calenderBox {
@@ -79,6 +79,11 @@ a {
   width: 100%;
   margin: 1.5vH 0.5vH 1.5vH 0.5vH;
 }
+
+.reminderStateWrapper {
+  display: flex;
+}
+
 .svg {
   background-color: lightgray;
   border-radius: 10px 0px 0px 10px;
@@ -91,6 +96,7 @@ a {
 }
 .reminderStateInfoText {
   font-weight: bolder;
+  padding: 0;
 }
 
 .editReminder {
@@ -186,6 +192,7 @@ a {
   display: flex;
   justify-content: center;
   width: 20%;
+  border: solid;
   border-radius: 10px;
   margin-left: 5%;
 }
