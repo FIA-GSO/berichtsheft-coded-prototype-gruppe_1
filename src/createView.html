@@ -2,39 +2,116 @@
 <html lang="de">
   <head>
     <title>Prototype</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="createView.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="fullPage">
       <main class="topLine">
-
         <header class="headBarWrapper">
           <div class="currentAbnBar">
             <p class="dateOfAbn">20.01.2025 - 26.01.2025 KW:4</p>
           </div>
 
-          <button type="button" class="burgerMenu" aria-label="Menü öffnen">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 100 80" fill="none">
-              <path stroke="currentColor" stroke-width="15" stroke-linecap="round" d="M 5 10 H 95 M 5 40 H 95 M 5 70 H 95"></path>
+          <button
+            type="button"
+            class="burgerMenu"
+            aria-label="Menü öffnen"
+            id="burgerMenuBtn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 100 80"
+              fill="none"
+            >
+              <path
+                stroke="currentColor"
+                stroke-width="15"
+                stroke-linecap="round"
+                d="M 5 10 H 95 M 5 40 H 95 M 5 70 H 95"
+              ></path>
             </svg>
           </button>
         </header>
 
-        <section class="currentAbn">
+        <div class="menuOverlay" id="menuOverlay"></div>
 
+        <aside class="menuPanel" id="menuPanel">
+          <form class="menuForm">
+            <div class="formGroup">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" />
+            </div>
+
+            <div class="formGroup">
+              <label for="ausbildungswoche">Ausbildungswoche:</label>
+              <input
+                type="text"
+                id="ausbildungswoche"
+                name="ausbildungswoche"
+              />
+            </div>
+
+            <div class="formGroup">
+              <label for="abteilung">Abteilung:</label>
+              <input type="text" id="abteilung" name="abteilung" />
+            </div>
+
+            <div class="formGroup">
+              <label for="ausbildungsjahr">Ausbildungsjahr:</label>
+              <input type="text" id="ausbildungsjahr" name="ausbildungsjahr" />
+            </div>
+          </form>
+        </aside>
+
+        <section class="currentAbn">
           <h2 class="currentDay">
             <time datetime="2025-01-23">Donnerstag den 23.01.2025</time>
           </h2>
 
           <ul class="currentAbnItems">
-
             <li class="item1wrapper">
               <div class="item">
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="5" y="5" width="40" height="40" rx="5" stroke="#8B0000" stroke-width="4"></rect>
-                  <line x1="15" y1="15" x2="35" y2="35" stroke="#8B0000" stroke-width="4" stroke-linecap="round"></line>
-                  <line x1="35" y1="15" x2="15" y2="35" stroke="#8B0000" stroke-width="4" stroke-linecap="round"></line>
+                <svg
+                  width="50"
+                  height="50"
+                  viewBox="0 0 50 50"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="5"
+                    y="5"
+                    width="40"
+                    height="40"
+                    rx="5"
+                    stroke="#8B0000"
+                    stroke-width="4"
+                  ></rect>
+                  <line
+                    x1="15"
+                    y1="15"
+                    x2="35"
+                    y2="35"
+                    stroke="#8B0000"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                  ></line>
+                  <line
+                    x1="35"
+                    y1="15"
+                    x2="15"
+                    y2="35"
+                    stroke="#8B0000"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                  ></line>
                 </svg>
                 <p class="itemText">Tätigkeit: ABN Pflege</p>
               </div>
@@ -43,10 +120,40 @@
 
             <li class="item2wrapper">
               <div class="item">
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="5" y="5" width="40" height="40" rx="5" stroke="#8B0000" stroke-width="4"></rect>
-                  <line x1="15" y1="15" x2="35" y2="35" stroke="#8B0000" stroke-width="4" stroke-linecap="round"></line>
-                  <line x1="35" y1="15" x2="15" y2="35" stroke="#8B0000" stroke-width="4" stroke-linecap="round"></line>
+                <svg
+                  width="50"
+                  height="50"
+                  viewBox="0 0 50 50"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="5"
+                    y="5"
+                    width="40"
+                    height="40"
+                    rx="5"
+                    stroke="#8B0000"
+                    stroke-width="4"
+                  ></rect>
+                  <line
+                    x1="15"
+                    y1="15"
+                    x2="35"
+                    y2="35"
+                    stroke="#8B0000"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                  ></line>
+                  <line
+                    x1="35"
+                    y1="15"
+                    x2="15"
+                    y2="35"
+                    stroke="#8B0000"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                  ></line>
                 </svg>
                 <p class="itemText">Tätigkeit: ABN Pflege</p>
               </div>
@@ -101,5 +208,19 @@
             </div>
       </div>
     </div>
+
+    <script>
+      const burgerMenuBtn = document.getElementById("burgerMenuBtn");
+      const menuPanel = document.getElementById("menuPanel");
+      const menuOverlay = document.getElementById("menuOverlay");
+
+      function toggleMenu() {
+        menuPanel.classList.toggle("active");
+        menuOverlay.classList.toggle("active");
+      }
+
+      burgerMenuBtn.addEventListener("click", toggleMenu);
+      menuOverlay.addEventListener("click", toggleMenu);
+    </script>
   </body>
 </html>
