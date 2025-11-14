@@ -17,16 +17,27 @@ select {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .fullPage {
   max-width: 100%;
   display: flex;
   flex-direction: column;
+  min-height: 100dvh;
 }
 
 .topLine {
   border-top: solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100dvh;
+}
+
+.pageDivider {
+  display: flex;
+  flex-direction: column;
 }
 
 .navToggle {
@@ -102,6 +113,7 @@ a {
   background-color: lightgray;
   border-radius: 0px 10px 10px 0px;
   padding: 1vH 2vH 1vH 1vH;
+  margin-right: 1.5vW;
 }
 
 .reminderStateInfoText {
@@ -208,161 +220,4 @@ a {
   border: solid;
   border-radius: 10px;
   margin-left: 5%;
-}
-
-
-/* --------------- createView CSS -------------------- */
-.headBarWrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.currentAbnBar {
-  display: flex;
-  align-items: center;
-  border: solid;
-  border-radius: 10px;
-  height: 5vH;
-  width: 90%;
-}
-
-.dateOfAbn {
-  font-size: 2.5vH;
-  margin: 5%;
-}
-
-.burgerMenu {
-  margin: 2vH;
-}
-
-.currentAbn {
-  border: solid;
-  border-radius: 10px;
-  background-color: lightgray;
-}
-
-.currentDay {
-  margin: 2vH 0 4vH 3vH;
-  font-size: 2vH;
-}
-
-.currentAbnItems {
-  display: flex;
-  flex-direction: column;
-}
-
-.item1wrapper {
-  display: flex;
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 10px;
-  margin: 0px 3vH 1vH 2vH;
-  width: 77%;
-}
-
-.itemDuration {
-  display: flex;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 10px;
-  width: 20%;
-  text-align: center;
-  justify-content: center;
-  margin: 0 3vH 1vH 0vH;
-}
-
-.item2wrapper {
-  display: flex;
-}
-
-.linewrapper {
-  display: flex;
-  margin-top: 52vh;
-}
-
-.lineABN {
-  background-color: #000000;
-  border-radius: 10px;
-  margin: 0px 3vH 1vH 6vH;
-  width: 72%;
-  height: 0.5vh;
-}
-
-.lineTime {
-  background-color: #000000;
-  border-radius: 10px;
-  margin: 0px 4vH 1vH 6vH;
-  width: 17%;
-  height: 0.5vh;
-}
-
-.lem {
-  display: flex;
-}
-
-.lemButtons {
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-  margin: 0px 3vH 1vH 2vH;
-  width: 77%;
-}
-
-.lemButtom {
-  padding: 1vh;
-  width: 22vh;
-  border-radius: 10px;
-  border: solid;
-  margin-right: 1vh;
-}
-
-.lemGesamtzahl {
-  display: flex;
-  align-items: center;
-  background-color: #df6666;
-  border-radius: 10px;
-  width: 22%;
-  text-align: center;
-  justify-content: center;
-  margin: 0 3vH 1vH 0vH;
-  padding: 1vh 0vh 1vh 0vh;
-}
-
-.tagAuswahl {
-  border: solid;
-  border-radius: 10px;
-  background-color: lightgray;
-  margin-top: 1vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.tag {
-  padding: 1vh 3vh;
-  background-color: white;
-  margin: 1vh;
-  border: solid;
-}
-
-.aktiverTag {
-  background-color: #9f9f9f;
-}
-
-.hauptButtons {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1vh;
-}
-
-.hauptButton {
-  border: none;
-  background-color: white;
-  padding: 1vh 2vh;
 }
