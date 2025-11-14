@@ -209,6 +209,7 @@
 .lemGesamtzahl {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 70%;
   margin-top: 1vH;
   background-color: #df6666;
