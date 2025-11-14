@@ -2,6 +2,7 @@
 <html lang="de">
   <head>
     <title>Prototype</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="main.css" />
     <link rel="stylesheet" type="text/css" href="createView.css" />
     <link
@@ -12,201 +13,289 @@
   <body>
     <div class="fullPage">
       <main class="topLine">
-        <header class="headBarWrapper">
-          <div class="currentAbnBar">
-            <p class="dateOfAbn">20.01.2025 - 26.01.2025 KW:4</p>
-          </div>
+        <div class="pageDivider">
+          <header class="headBarWrapper">
+            <div class="currentAbnBar">
+              <p class="dateOfAbn">20.01.2025 - 26.01.2025 KW:4</p>
+            </div>
 
-          <button
-            type="button"
-            class="burgerMenu"
-            aria-label="Menü öffnen"
-            id="burgerMenuBtn"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="40"
-              viewBox="0 0 100 80"
-              fill="none"
+            <button
+              type="button"
+              class="burgerMenu"
+              aria-label="Menü öffnen"
+              id="burgerMenuBtn"
             >
-              <path
-                stroke="currentColor"
-                stroke-width="15"
-                stroke-linecap="round"
-                d="M 5 10 H 95 M 5 40 H 95 M 5 70 H 95"
-              ></path>
-            </svg>
-          </button>
-        </header>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 100 80"
+                fill="none"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-width="15"
+                  stroke-linecap="round"
+                  d="M 5 10 H 95 M 5 40 H 95 M 5 70 H 95"
+                ></path>
+              </svg>
+            </button>
+          </header>
 
-        <div class="menuOverlay" id="menuOverlay"></div>
+          <div class="menuOverlay" id="menuOverlay"></div>
 
-        <aside class="menuPanel" id="menuPanel">
-          <form class="menuForm">
-            <div class="formGroup">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" />
-            </div>
-
-            <div class="formGroup">
-              <label for="ausbildungswoche">Ausbildungswoche:</label>
-              <input
-                type="text"
-                id="ausbildungswoche"
-                name="ausbildungswoche"
-              />
-            </div>
-
-            <div class="formGroup">
-              <label for="abteilung">Abteilung:</label>
-              <input type="text" id="abteilung" name="abteilung" />
-            </div>
-
-            <div class="formGroup">
-              <label for="ausbildungsjahr">Ausbildungsjahr:</label>
-              <input type="text" id="ausbildungsjahr" name="ausbildungsjahr" />
-            </div>
-          </form>
-        </aside>
-
-        <section class="currentAbn">
-          <h2 class="currentDay">
-            <time datetime="2025-01-23">Donnerstag den 23.01.2025</time>
-          </h2>
-
-          <ul class="currentAbnItems">
-            <li class="item1wrapper">
-              <div class="item">
-                <svg
-                  width="50"
-                  height="50"
-                  viewBox="0 0 50 50"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    x="5"
-                    y="5"
-                    width="40"
-                    height="40"
-                    rx="5"
-                    stroke="#8B0000"
-                    stroke-width="4"
-                  ></rect>
-                  <line
-                    x1="15"
-                    y1="15"
-                    x2="35"
-                    y2="35"
-                    stroke="#8B0000"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                  ></line>
-                  <line
-                    x1="35"
-                    y1="15"
-                    x2="15"
-                    y2="35"
-                    stroke="#8B0000"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                  ></line>
-                </svg>
-                <p class="itemText">Tätigkeit: ABN Pflege</p>
+          <aside class="menuPanel" id="menuPanel">
+            <form class="menuForm">
+              <div class="formGroup">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" />
               </div>
-              <p class="itemDuration">2</p>
-            </li>
 
-            <li class="item2wrapper">
-              <div class="item">
-                <svg
-                  width="50"
-                  height="50"
-                  viewBox="0 0 50 50"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    x="5"
-                    y="5"
-                    width="40"
-                    height="40"
-                    rx="5"
-                    stroke="#8B0000"
-                    stroke-width="4"
-                  ></rect>
-                  <line
-                    x1="15"
-                    y1="15"
-                    x2="35"
-                    y2="35"
-                    stroke="#8B0000"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                  ></line>
-                  <line
-                    x1="35"
-                    y1="15"
-                    x2="15"
-                    y2="35"
-                    stroke="#8B0000"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                  ></line>
-                </svg>
-                <p class="itemText">Tätigkeit: ABN Pflege</p>
+              <div class="formGroup">
+                <label for="ausbildungswoche">Ausbildungswoche:</label>
+                <input
+                  type="text"
+                  id="ausbildungswoche"
+                  name="ausbildungswoche"
+                />
               </div>
-              <div class="itemDuration">2</div>
+
+              <div class="formGroup">
+                <label for="abteilung">Abteilung:</label>
+                <input type="text" id="abteilung" name="abteilung" />
+              </div>
+
+              <div class="formGroup">
+                <label for="ausbildungsjahr">Ausbildungsjahr:</label>
+                <input type="text" id="ausbildungsjahr" name="ausbildungsjahr" />
+              </div>
+            </form>
+          </aside>
+
+          <section class="currentAbn">
+            <div class="currentAbnDivider1">
+              <h2 class="currentDay">
+                <time datetime="2025-01-23">Donnerstag den 23.01.2025</time>
+              </h2>
+
+              <ul class="currentAbnItems">
+                <li class="item1wrapper">
+                  <div class="item">
+                    <svg
+                      width="50"
+                      height="50"
+                      viewBox="0 0 50 50"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="5"
+                        y="5"
+                        width="40"
+                        height="40"
+                        rx="5"
+                        stroke="#8B0000"
+                        stroke-width="4"
+                      ></rect>
+                      <line
+                        x1="15"
+                        y1="15"
+                        x2="35"
+                        y2="35"
+                        stroke="#8B0000"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                      ></line>
+                      <line
+                        x1="35"
+                        y1="15"
+                        x2="15"
+                        y2="35"
+                        stroke="#8B0000"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                      ></line>
+                    </svg>
+                    <p class="itemText">Tätigkeit: ABN Pflege</p>
+                  </div>
+                  <p class="itemDuration">2</p>
+                </li>
+
+                <li class="item2wrapper">
+                  <div class="item">
+                    <svg
+                      width="50"
+                      height="50"
+                      viewBox="0 0 50 50"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="5"
+                        y="5"
+                        width="40"
+                        height="40"
+                        rx="5"
+                        stroke="#8B0000"
+                        stroke-width="4"
+                      ></rect>
+                      <line
+                        x1="15"
+                        y1="15"
+                        x2="35"
+                        y2="35"
+                        stroke="#8B0000"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                      ></line>
+                      <line
+                        x1="35"
+                        y1="15"
+                        x2="15"
+                        y2="35"
+                        stroke="#8B0000"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                      ></line>
+                    </svg>
+                    <p class="itemText">Tätigkeit: Mock-Up erstellen</p>
+                  </div>
+                  <div class="itemDuration">3</div>
+                </li>
+              </ul>
             </div>
-            <div class="linewrapper">
-              <div class="lineABN"></div>
-              <div class="lineTime"></div>
-            </div>
-            <div class="lem">
-              <div class="lemButtons">
+            <div class="currentAbnDivider2">
+
+              <div class="lem">
+                <div class="lemButtons">
                   <button type="button" class="lemButtom">+ Erstellen</button>
-                  button(type="button" class="lemButtom") + Vorlage auswählen
+                  <button type="button" class="lemButtom">
+                    + Vorlage auswählen
+                  </button>
+                </div>
+                <div class="lineLemTotal">
+                  <div class="lemGesamtzahl">4</div>
+                </div>
               </div>
-              <div class="lemGesamtzahl">4</div>
             </div>
-            </div>
-          </div>
+          </section>
         </div>
-            <div class="tagAuswahl">
-                <button type="button" class="tag">Mo</button>
-                <button type="button" class="tag">Di</button>
-                <button type="button" class="tag">Mi</button>
-                <button type="button" class="tag aktiverTag">Do</button>
-                <button type="button" class="tag">Fr</button>
-            </div>
-            <div class="hauptButtons">
-              <button type="button" class="hauptButton"><svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" aria-hidden="true">
-                <rect x="8" y="8" width="104" height="104" rx="14" ry="14" fill="#ffffff" stroke="#2f2f2f" stroke-width="3"/>
+        <footer class="footerNavBar">
+          <div class="tagAuswahl">
+            <button type="button" class="tag">Mo</button>
+            <button type="button" class="tag">Di</button>
+            <button type="button" class="tag">Mi</button>
+            <button type="button" class="tag aktiverTag">Do</button>
+            <button type="button" class="tag">Fr</button>
+          </div>
+
+          <div class="hauptButtons">
+            <button type="button" class="hauptButton">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="120"
+                height="120"
+                viewBox="0 0 120 120"
+                aria-hidden="true"
+              >
+                <rect
+                  x="8"
+                  y="8"
+                  width="104"
+                  height="104"
+                  rx="14"
+                  ry="14"
+                  fill="#ffffff"
+                  stroke="#2f2f2f"
+                  stroke-width="3"
+                />
                 <g stroke="#222222" stroke-width="8" stroke-linecap="round">
-                  <line x1="36" y1="36" x2="84" y2="84"/>
-                  <line x1="84" y1="36" x2="36" y2="84"/>
+                  <line x1="36" y1="36" x2="84" y2="84" />
+                  <line x1="84" y1="36" x2="36" y2="84" />
                 </g>
-                </svg>
-              </button>
-              <button type="button" class="hauptButton">
-                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" aria-hidden="true">
-                  <rect x="8" y="8" width="104" height="104" rx="14" ry="14" fill="#ffffff" stroke="#2f2f2f" stroke-width="3"/>
-                  <g fill="none" stroke="#222222" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
-                  <path d="M30 62 L60 36 L90 62 V86 H30 Z"/>
-                  <rect x="52" y="68" width="16" height="18" rx="2" ry="2" fill="none"/>
-                  <line x1="60" y1="68" x2="60" y2="86" stroke="#222222" stroke-width="4"/>
-                  </g>
-                </svg>
-              </button>
-              <button type="button" class="hauptButton">
-                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" aria-hidden="true">
-                  <rect x="8" y="8" width="104" height="104" rx="14" ry="14" fill="#ffffff" stroke="#2f2f2f" stroke-width="3"/>
-                  <path d="M34 64 L52 80 L86 46" fill="none" stroke="#222222" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </button>
-            </div>
-      </div>
+              </svg>
+            </button>
+
+            <a href="index.html" class="hauptButton">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="120"
+                height="120"
+                viewBox="0 0 120 120"
+                aria-hidden="true"
+              >
+                <rect
+                  x="8"
+                  y="8"
+                  width="104"
+                  height="104"
+                  rx="14"
+                  ry="14"
+                  fill="#ffffff"
+                  stroke="#2f2f2f"
+                  stroke-width="3"
+                />
+                <g
+                  fill="none"
+                  stroke="#222222"
+                  stroke-width="7"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                >
+                  <path d="M30 62 L60 36 L90 62 V86 H30 Z" />
+                  <rect
+                    x="52"
+                    y="68"
+                    width="16"
+                    height="18"
+                    rx="2"
+                    ry="2"
+                    fill="none"
+                  />
+                  <line
+                    x1="60"
+                    y1="68"
+                    x2="60"
+                    y2="86"
+                    stroke="#222222"
+                    stroke-width="4"
+                  />
+                </g>
+              </svg>
+            </a>
+
+            <button type="button" class="hauptButton">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="120"
+                height="120"
+                viewBox="0 0 120 120"
+                aria-hidden="true"
+              >
+                <rect
+                  x="8"
+                  y="8"
+                  width="104"
+                  height="104"
+                  rx="14"
+                  ry="14"
+                  fill="#ffffff"
+                  stroke="#2f2f2f"
+                  stroke-width="3"
+                />
+                <path
+                  d="M34 64 L52 80 L86 46"
+                  fill="none"
+                  stroke="#222222"
+                  stroke-width="8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </footer>
+      </main>
     </div>
 
     <script>
